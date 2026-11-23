@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANKAN · अंकन · Writing instruments made by hand in India</title>
+<meta name="description" content="Ankan is a concept house of fountain pens inlaid, enamelled and carved by hand across India. Watch the pen come apart, see the nib ground, and write your name in gold ink.">
+<link rel="preload" href="fonts/caslon.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/film-first.webp" as="image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 30 L8 8 Q8 2 16 2 Q24 2 24 8 Z%22 fill=%22%23c9a45c%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- loader: a nib draws one gold line while the film arrives -->
+<div id="ld" aria-hidden="true">
+  <div class="ld-in">
+    <p class="ld-dev">अंकन</p>
+    <svg class="ld-line" viewBox="0 0 600 80" preserveAspectRatio="none">
+      <path id="ldTrack" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
+      <path id="ldP" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
+    </svg>
+    <p class="ld-n"><span id="ldN">0</span><small>ink drawn</small></p>
+  </div>
+</div>
+
+<canvas id="trail" aria-hidden="true"></canvas>
+
+<header id="hd">
+  <a class="logo" href="#top" aria-label="Ankan home"><span>Ankan</span><i>अंकन</i></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#nib">The nib</a>
+    <a href="#write">Write</a>
+    <a href="#collection">Collection</a>
+    <a href="#commission" class="nav-cta">Commission a pen</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ───── the film ───── -->
+<section id="film" aria-label="A Bidri fountain pen comes apart and reassembles">
+  <div class="film-stick">
+    <canvas id="fc"></canvas>
+    <div class="film-shade"></div>
+
+    <div id="hero" class="hero">
+      <p class="hero-dev">अंकन</p>
+      <h1>A pen that took<br>a year to make.</h1>
+      <p class="hero-sub">Fountain pens inlaid, enamelled and carved by hand in six craft towns of India. Scroll, and watch one come apart.</p>
+    </div>
+    <p id="cue" class="cue"><span></span>Scroll</p>
+
+    <div class="ch" id="ch1">
+      <h2>Bidri, from the fort town of Bidar.</h2>
+      <p>Zinc alloy darkened with soil from the old fort walls, then inlaid with pure silver wire, one petal at a time.</p>
+    </div>
+
+    <div id="parts" aria-hidden="true">
+      <div class="pt up" data-x="205"><b>Cap</b><span>Bidri jaal, silver clip</span></div>
+      <div class="pt dn" data-x="430"><b>Nib</b><span>18k gold, ground by hand</span></div>
+      <div class="pt up" data-x="530"><b>Feed</b><span>Ebonite, fins cut by hand</span></div>
+      <div class="pt dn" data-x="640"><b>Section</b><span>Sterling silver</span></div>
+      <div class="pt up" data-x="805"><b>Converter</b><span>Piston, 1.1 ml</span></div>
+      <div class="pt dn" data-x="1060"><b>Barrel</b><span>Floral inlay, 41 hours</span></div>
+    </div>
+
+    <div class="ch ch-r" id="ch2">
+      <h2>Thirty-one parts. One pair of hands.</h2>
+      <p>Every Ankan is fitted, inked and written with by the karigar who made it, before it leaves the bench.</p>
+    </div>
+
+    <ol id="hud" aria-hidden="true">
+      <li><b></b>Turn</li><li><b></b>Apart</li><li><b></b>Whole</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ───── the nib ───── -->
+<section id="nib" class="grind">
+  <video id="grindV" class="grind-v" src="media/grind.mp4" poster="img/grind-poster.webp" muted loop playsinline preload="none"></video>
+  <div class="grind-shade"></div>
+  <div class="grind-txt">
+    <h2 class="split">The nib is ground by eye, not by machine.</h2>
+    <p class="rv">An 18 karat gold nib is tipped with iridium, then held to a spinning wheel until the line it lays down is exactly the one you asked for. It takes our nib master about three hours. Then he writes with it, and grinds again.</p>
+  </div>
+</section>
+
+<section id="pad" class="pad">
+  <div class="pad-head">
+    <h2 class="split">Choose how your line should feel.</h2>
+    <p class="rv">Draw on the sheet. Each grind lays ink differently: a stub thickens downstrokes, an italic changes with the angle of your hand.</p>
+  </div>
+  <div class="pad-wrap">
+    <div class="nibs" role="radiogroup" aria-label="Nib grind">
+      <button role="radio" aria-checked="false" data-w="1.2" data-k="0">Extra fine<small>0.3 mm</small></button>
+      <button role="radio" aria-checked="true" data-w="2.2" data-k="0" class="on">Fine<small>0.5 mm</small></button>
+      <button role="radio" aria-checked="false" data-w="3.4" data-k="0">Medium<small>0.7 mm</small></button>
+      <button role="radio" aria-checked="false" data-w="5" data-k="0">Broad<small>1.0 mm</small></button>
+      <button role="radio" aria-checked="false" data-w="6" data-k="0.75">Stub<small>1.1 mm</small></button>
+      <button role="radio" aria-checked="false" data-w="8" data-k="0.92">Italic<small>1.5 mm</small></button>
+    </div>
+    <div class="sheet">
+      <canvas id="padC" aria-label="Drawing sheet. Drag to write with the chosen nib."></canvas>
+      <button id="padClear" class="ghost">Fresh sheet</button>
+      <p class="sheet-hint">Draw here</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── write your name ───── -->
+<section id="write" class="write">
+  <div class="write-head">
+    <h2 class="split">Every Ankan is signed. Let us sign yours.</h2>
+    <p class="rv">Type a name. Our nib will write it in ink.</p>
+  </div>
+  <form id="wForm" class="wform" autocomplete="off">
+    <label class="sr" for="wName">Your name</label>
+    <input id="wName" maxlength="18" value="Anshika" spellcheck="false">
+    <div class="inks" role="radiogroup" aria-label="Ink">
+      <button type="button" role="radio" aria-checked="true" class="on" data-ink="gold" style="--c:#d8b46a">Sona<small>gold</small></button>
+      <button type="button" role="radio" aria-checked="false" data-ink="neel" style="--c:#6f8be0">Neel<small>indigo</small></button>
+      <button type="button" role="radio" aria-checked="false" data-ink="sindoor" style="--c:#d9503f">Sindoor<small>vermilion</small></button>
+      <button type="button" role="radio" aria-checked="false" data-ink="kesar" style="--c:#efa13a">Kesar<small>saffron</small></button>
+    </div>
+    <button class="btn" type="submit">Write it</button>
+  </form>
+  <div class="stage">
+    <svg id="sig" aria-live="polite" role="img" aria-label="Your name written in ink">
+      <defs>
+        <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#8a6420"/><stop offset=".35" stop-color="#f3d998"/><stop offset=".55" stop-color="#c79a45"/><stop offset=".8" stop-color="#fff1c7"/><stop offset="1" stop-color="#9c7330"/>
+        </linearGradient>
+        <linearGradient id="gShine" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+        <filter id="wet"><feGaussianBlur stdDeviation=".35"/></filter>
+        <clipPath id="sigClip"><path id="sigClipP"/></clipPath>
+      </defs>
+      <g id="sigFill"></g>
+      <g id="sigStroke"></g>
+      <rect id="shine" clip-path="url(#sigClip)" fill="url(#gShine)" height="100%" width="18%" x="-20%" y="0" opacity="0"/>
+      <g id="nibG" opacity="0">
+        <path d="M0 0 L-7 -26 Q-9 -40 -6 -52 L6 -52 Q9 -40 7 -26 Z" fill="url(#gGold)" stroke="#6b4c17" stroke-width=".6"/>
+        <path d="M0 -2 L0 -30" stroke="#3a2a0c" stroke-width=".8"/><circle cx="0" cy="-32" r="2" fill="#2b1f09"/>
+        <rect x="-8" y="-80" width="16" height="30" rx="3" fill="#1b1d21" stroke="#c9ccd2" stroke-width=".7"/>
+      </g>
+      <g id="drops"></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ───── collection ───── -->
+<section id="collection" class="coll">
+  <div class="coll-stick">
+    <div class="coll-head">
+      <h2 class="split">Six crafts. Six towns. One pen each.</h2>
+      <p class="rv">Every barrel is made by a family that has practised its craft for generations. We only design the nib, the fit and the balance.</p>
+    </div>
+    <div class="rail" id="rail">
+      <article class="pen"><figure><img src="img/bidri.webp" alt="Bidri fountain pen with silver inlay standing beside its cap" loading="lazy"></figure><h3>Bidri</h3><p class="o">Bidar, Karnataka</p><p>Blackened zinc, inlaid with pure silver wire in a floral jaal.</p><p class="pr">₹48,000</p></article>
+      <article class="pen"><figure><img src="img/meena.webp" alt="Meenakari enamel fountain pen in red, green and gold" loading="lazy"></figure><h3>Meenakari</h3><p class="o">Jaipur, Rajasthan</p><p>Kiln-fired enamel in jewel colours over engraved silver, fired seven times.</p><p class="pr">₹56,000</p></article>
+      <article class="pen"><figure><img src="img/filigree.webp" alt="Silver filigree fountain pen with blue accents" loading="lazy"></figure><h3>Tarakasi</h3><p class="o">Cuttack, Odisha</p><p>Silver filigree drawn finer than hair, coiled and soldered by hand.</p><p class="pr">₹64,000</p></article>
+      <article class="pen"><figure><img src="img/sandal.webp" alt="Carved sandalwood fountain pen with copper cap" loading="lazy"></figure><h3>Sandalwood</h3><p class="o">Mysuru, Karnataka</p><p>Carved from a single fragrant billet; it still smells of sandal years later.</p><p class="pr">₹32,000</p></article>
+      <article class="pen"><figure><img src="img/lac.webp" alt="Orange lacquered wooden fountain pen" loading="lazy"></figure><h3>Channapatna lac</h3><p class="o">Channapatna, Karnataka</p><p>Ivory-wood turned on a lathe and polished with lac and screw-pine leaf.</p><p class="pr">₹18,500</p></article>
+      <article class="pen"><figure><img src="img/ebony.webp" alt="Black ebony fountain pen with an engraved gold cap" loading="lazy"></figure><h3>Ebony &amp; gold</h3><p class="o">Hoshiarpur, Punjab</p><p>Ebony with a hand-chased gold cap from the town's inlay workshops.</p><p class="pr">₹41,000</p></article>
+    </div>
+    <div class="coll-bar"><b id="collBar"></b></div>
+  </div>
+</section>
+
+<!-- ───── anatomy ───── -->
+<section id="anatomy" class="anat">
+  <div class="anat-img">
+    <img src="img/nib.webp" alt="Engraved 18 karat gold nib with a heart-shaped breather hole" loading="lazy">
+    <button class="hs" style="--x:86%;--y:83%" data-i="0" aria-label="Tipping"></button>
+    <button class="hs" style="--x:71%;--y:66%" data-i="1" aria-label="Slit"></button>
+    <button class="hs" style="--x:53%;--y:47%" data-i="2" aria-label="Breather hole"></button>
+    <button class="hs" style="--x:27%;--y:16%" data-i="3" aria-label="Engraving"></button>
+  </div>
+  <div class="anat-txt">
+    <h2 class="split">Four places where a nib is made or ruined.</h2>
+    <ol class="anat-list">
+      <li class="on"><h3>Tipping</h3><p>A bead of iridium welded to the gold, then ground to your grind. This is the only part that touches paper.</p></li>
+      <li><h3>Slit</h3><p>Cut with a blade thinner than a page. Too wide and the nib floods; too tight and it skips.</p></li>
+      <li><h3>Breather hole</h3><p>Ours is a heart, pierced by hand. It lets air in as ink flows out, and stops the nib from cracking.</p></li>
+      <li><h3>Engraving</h3><p>Scrollwork cut with a burin on the gold. No two Ankan nibs carry the same pattern.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ───── the karigar ───── -->
+<section id="karigar" class="kar">
+  <figure class="kar-img"><img src="img/craftsman.webp" alt="A craftsman's hands fitting a pen on a wooden bench" loading="lazy"></figure>
+  <div class="kar-txt">
+    <blockquote class="split">“A machine can make a pen that writes. Only a hand can make one that writes like you.”</blockquote>
+    <p class="who rv">Rafiq Ahmed, Bidri karigar, Bidar. Thirty-four years at the bench.</p>
+    <div class="kar-inks rv">
+      <img src="img/inks.webp" alt="Four glass bottles of ink: indigo, vermilion, grey and saffron" loading="lazy">
+      <p>Our four inks are mixed in small batches: Neel, Sindoor, Monsoon and Kesar. Each pen ships with the one you choose.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ───── commission ───── -->
+<section id="commission" class="com">
+  <div class="com-img"><img src="img/letter.webp" alt="A fountain pen resting on a handwritten letter sealed with red wax" loading="lazy"></div>
+  <div class="com-form">
+    <h2 class="split">Commission a pen.</h2>
+    <p class="rv">Tell us whose name it is for. A karigar will write back to you by hand.</p>
+    <form id="cForm" novalidate>
+      <label>Name to engrave<input name="n" required maxlength="24" placeholder="Anshika"></label>
+      <label>Craft<select name="c"><option>Bidri</option><option>Meenakari</option><option>Tarakasi</option><option>Sandalwood</option><option>Channapatna lac</option><option>Ebony &amp; gold</option></select></label>
+      <label>Nib<select name="b"><option>Extra fine</option><option selected>Fine</option><option>Medium</option><option>Broad</option><option>Stub</option><option>Italic</option></select></label>
+      <label>Email<input name="e" type="email" required placeholder="you@example.com"></label>
+      <p class="err" id="cErr" role="alert"></p>
+      <button class="btn" type="submit">Request a commission</button>
+    </form>
+    <div id="cDone" class="done" hidden>
+      <p class="done-sig" id="cSig"></p>
+      <p>Commission requested. Expect a handwritten reply within a week.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <p class="ft-dev">अंकन</p>
+  <p class="ft-l">Ankan writing instruments · Bidar · Jaipur · Cuttack · Mysuru · Channapatna · Hoshiarpur</p>
+  <p class="ft-c">Concept website · sample products and prices · not a real store</p>
+</footer>
+
+<script src="lenis.min.js"></script>
+<script src="opentype.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
