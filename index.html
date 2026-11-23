@@ -28,7 +28,11 @@
 
 <canvas id="trail" aria-hidden="true"></canvas>
 <div class="grain" aria-hidden="true"></div>
-<div id="cur" aria-hidden="true"><span></span></div>
+<div id="nibc" aria-hidden="true"><svg viewBox="-20 -100 40 104"><defs><linearGradient id="ncG" x1="0" x2="1"><stop offset="0" stop-color="#8d6c35"/><stop offset=".45" stop-color="#f3dcaa"/><stop offset="1" stop-color="#a9864a"/></linearGradient></defs><path d="M0 0 L-9 -34 Q-12 -52 -8 -66 L8 -66 Q12 -52 9 -34 Z" fill="url(#ncG)" stroke="#5b4219" stroke-width=".8"/><path d="M0 -1 L0 -38" stroke="#3a2a0c" stroke-width="1"/><circle cx="0" cy="-40" r="2.6" fill="#1a1208"/><rect x="-11" y="-98" width="22" height="34" rx="4" fill="#0d1526" stroke="#b8955a" stroke-width="1"/></svg></div>
+<aside id="gauge" aria-label="Page sections">
+  <div class="g-tube"><div class="g-ink" id="gInk"></div><div class="g-glass"></div></div>
+  <ol class="g-ticks" id="gTicks"></ol>
+</aside>
 
 <header id="hd">
   <a class="logo" href="#top" aria-label="Ankan home">ANKAN</a>
@@ -51,7 +55,7 @@
 
     <div id="hero" class="hero">
       <p class="hero-ed">The Bidri Edition · No. 01 of 31</p>
-      <h1>A pen that took<br>a year to make.</h1>
+      <h1 class="ink-h">A pen that took<br>a year to make.</h1>
       <p class="hero-sub">Fountain pens inlaid, enamelled and carved by hand in six craft towns of India. Scroll, and watch one come apart.</p>
     </div>
     <p id="cue" class="cue"><span></span>Scroll</p>
@@ -86,14 +90,14 @@
   <video id="grindV" class="grind-v" src="media/grind.mp4" poster="img/grind-poster.webp" muted loop playsinline preload="none"></video>
   <div class="grind-shade"></div>
   <div class="grind-txt">
-    <h2 class="split">The nib is ground by eye, not by machine.</h2>
+    <h2 class="ink-h">The nib is ground by eye, not by machine.</h2>
     <p class="rv">An 18 karat gold nib is tipped with iridium, then held to a spinning wheel until the line it lays down is exactly the one you asked for. It takes our nib master about three hours. Then he writes with it, and grinds again.</p>
   </div>
 </section>
 
 <section id="pad" class="pad">
   <div class="pad-head">
-    <h2 class="split">Choose how your line should feel.</h2>
+    <h2 class="ink-h">Choose how your line should feel.</h2>
     <p class="rv">Draw on the sheet. Each grind lays ink differently: a stub thickens downstrokes, an italic changes with the angle of your hand.</p>
   </div>
   <div class="pad-wrap">
@@ -117,7 +121,7 @@
 <section id="write" class="write">
   <svg class="write-guil guil" data-n="11" data-k="90" aria-hidden="true"></svg>
   <div class="write-head">
-    <h2 class="split">Every Ankan is signed. Let us sign yours.</h2>
+    <h2 class="ink-h">Every Ankan is signed. Let us sign yours.</h2>
     <p class="rv">Type a name, choose an ink, and our nib will write it for you.</p>
   </div>
   <form id="wForm" class="wform" autocomplete="off">
@@ -152,7 +156,7 @@
       <g id="drops"></g>
     </svg>
     <div id="seal" aria-hidden="true">
-      <svg viewBox="0 0 200 200">
+      <svg viewBox="0 0 200 200"><g id="sealArt">
         <defs>
           <radialGradient id="wax" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#b3373a"/><stop offset=".55" stop-color="#7c1a20"/><stop offset="1" stop-color="#4a0c11"/></radialGradient>
           <filter id="waxF"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="14"/></filter>
@@ -165,39 +169,47 @@
           <text x="100" y="127" text-anchor="middle" font-family="B" font-size="84" font-style="italic">A</text>
         </g>
         <ellipse cx="74" cy="66" rx="26" ry="12" fill="#fff" opacity=".12" transform="rotate(-30 74 66)"/>
-      </svg>
+      </g></svg>
     </div>
   </div>
 </section>
 
-<!-- ───── craft marquee ───── -->
-<div class="marq" id="marqW" aria-hidden="true"><div class="marq-in" id="marq">
-  <span>Bidri</span><i></i><span>Meenakari</span><i></i><span>Tarakasi</span><i></i><span>Sandalwood</span><i></i><span>Channapatna</span><i></i><span>Ebony &amp; gold</span><i></i>
-  <span>Bidri</span><i></i><span>Meenakari</span><i></i><span>Tarakasi</span><i></i><span>Sandalwood</span><i></i><span>Channapatna</span><i></i><span>Ebony &amp; gold</span><i></i>
-</div></div>
+<!-- ───── the drop: navy gives way to paper ───── -->
+<div class="bleed" id="bleed" aria-hidden="true">
+  <div class="bleed-stick">
+    <svg id="bleedSvg" preserveAspectRatio="xMidYMid slice">
+      <path id="blot" fill="#f1ebdf"/>
+      <g id="splash"></g>
+      <circle id="drop" r="9" fill="url(#dropG)"/>
+      <defs><radialGradient id="dropG" cx="35%" cy="30%"><stop offset="0" stop-color="#fff8e6"/><stop offset=".5" stop-color="#e7cf9c"/><stop offset="1" stop-color="#9a7638"/></radialGradient></defs>
+    </svg>
+    <p class="bleed-l" id="bleedL">A single drop, and the page begins.</p>
+  </div>
+</div>
 
 <!-- ───── collection ───── -->
 <section id="collection" class="coll light">
   <div class="coll-stick">
     <div class="coll-head">
-      <h2 class="split">Six crafts. Six towns. One pen each.</h2>
+      <h2 class="ink-h">Six crafts. Six towns. One pen each.</h2>
       <p class="rv">Every barrel is made by a family that has practised its craft for generations. We only design the nib, the fit and the balance.</p>
     </div>
-    <div class="rail" id="rail">
+    <div class="case"><div class="rail" id="rail">
       <article class="pen"><figure><img src="img/bidri.webp" alt="Bidri fountain pen with silver inlay standing beside its cap" loading="lazy"></figure><h3>Bidri</h3><p class="o">Bidar, Karnataka</p><p>Blackened zinc, inlaid with pure silver wire in a floral pattern.</p><p class="pr">₹48,000</p></article>
       <article class="pen"><figure><img src="img/meena.webp" alt="Meenakari enamel fountain pen in red, green and gold" loading="lazy"></figure><h3>Meenakari</h3><p class="o">Jaipur, Rajasthan</p><p>Kiln-fired enamel in jewel colours over engraved silver, fired seven times.</p><p class="pr">₹56,000</p></article>
       <article class="pen"><figure><img src="img/filigree.webp" alt="Silver filigree fountain pen with blue accents" loading="lazy"></figure><h3>Tarakasi</h3><p class="o">Cuttack, Odisha</p><p>Silver filigree drawn finer than hair, coiled and soldered by hand.</p><p class="pr">₹64,000</p></article>
       <article class="pen"><figure><img src="img/sandal.webp" alt="Carved sandalwood fountain pen with copper cap" loading="lazy"></figure><h3>Sandalwood</h3><p class="o">Mysuru, Karnataka</p><p>Carved from a single fragrant billet; it still smells of sandal years later.</p><p class="pr">₹32,000</p></article>
       <article class="pen"><figure><img src="img/lac.webp" alt="Orange lacquered wooden fountain pen" loading="lazy"></figure><h3>Channapatna lac</h3><p class="o">Channapatna, Karnataka</p><p>Ivory-wood turned on a lathe and polished with lac and screw-pine leaf.</p><p class="pr">₹18,500</p></article>
       <article class="pen"><figure><img src="img/ebony.webp" alt="Black ebony fountain pen with an engraved gold cap" loading="lazy"></figure><h3>Ebony &amp; gold</h3><p class="o">Hoshiarpur, Punjab</p><p>Ebony with a hand-chased gold cap from the town's inlay workshops.</p><p class="pr">₹41,000</p></article>
-    </div>
+    </div></div>
     <div class="coll-bar"><b id="collBar"></b></div>
   </div>
 </section>
 
 <!-- ───── anatomy ───── -->
 <section id="anatomy" class="anat light">
-  <div class="anat-img wipe">
+  <svg id="anatLine" class="anat-line" aria-hidden="true"><path id="anatP"/></svg>
+  <div class="anat-img soak">
     <img src="img/nib.webp" alt="Engraved 18 karat gold nib with a heart-shaped breather hole" loading="lazy">
     <button class="hs" style="--x:86%;--y:83%" data-i="0" aria-label="Tipping"></button>
     <button class="hs" style="--x:70%;--y:58%" data-i="1" aria-label="Slit"></button>
@@ -205,7 +217,7 @@
     <button class="hs" style="--x:27%;--y:16%" data-i="3" aria-label="Engraving"></button>
   </div>
   <div class="anat-txt">
-    <h2 class="split">Four places where a nib is made or ruined.</h2>
+    <h2 class="ink-h">Four places where a nib is made or ruined.</h2>
     <ol class="anat-list">
       <li class="on"><h3>Tipping</h3><p>A bead of iridium welded to the gold, then ground to your grind. This is the only part that touches paper.</p></li>
       <li><h3>Slit</h3><p>Cut with a blade thinner than a page. Too wide and the nib floods; too tight and it skips.</p></li>
@@ -217,9 +229,9 @@
 
 <!-- ───── the karigar ───── -->
 <section id="karigar" class="kar">
-  <figure class="kar-img wipe"><img src="img/craftsman.webp" alt="A craftsman's hands fitting a pen on a wooden bench" loading="lazy"></figure>
+  <figure class="kar-img soak"><img src="img/craftsman.webp" alt="A craftsman's hands fitting a pen on a wooden bench" loading="lazy"></figure>
   <div class="kar-txt">
-    <blockquote class="split">“A machine can make a pen that writes. Only a hand can make one that writes like you.”</blockquote>
+    <blockquote class="ink-h">“A machine can make a pen that writes. Only a hand can make one that writes like you.”</blockquote>
     <p class="who rv">Rafiq Ahmed, Bidri craftsman, Bidar. Thirty-four years at the bench.</p>
     <div class="kar-inks rv">
       <img src="img/inks.webp" alt="Four glass bottles of ink in indigo, vermilion, grey and saffron" loading="lazy">
@@ -231,10 +243,10 @@
 <!-- ───── the edition ───── -->
 <section id="edition" class="ed">
   <svg class="ed-guil guil" data-n="9" data-k="70" aria-hidden="true"></svg>
-  <figure class="ed-img wipe"><img src="img/write2.webp" alt="An engraved gold nib writing in gold ink on handmade paper" loading="lazy"></figure>
+  <figure class="ed-img soak"><img src="img/write2.webp" alt="An engraved gold nib writing in gold ink on handmade paper" loading="lazy"></figure>
   <div class="ed-txt">
     <p class="ed-k rv">The edition</p>
-    <h2 class="split">Thirty-one pens a year. Never more.</h2>
+    <h2 class="ink-h">Thirty-one pens a year. Never more.</h2>
     <p class="rv">Each Ankan is numbered on the barrel, signed under the clip, and delivered in a hand-polished rosewood case with a certificate written in ink by the craftsman who made it.</p>
     <dl class="ed-list rv">
       <div><dt>Numbered</dt><dd>01 to 31, engraved on the barrel</dd></div>
@@ -246,9 +258,9 @@
 
 <!-- ───── commission ───── -->
 <section id="commission" class="com light">
-  <div class="com-img wipe"><img src="img/letter.webp" alt="A fountain pen resting on a handwritten letter sealed with red wax" loading="lazy"></div>
+  <div class="com-img soak"><img src="img/letter.webp" alt="A fountain pen resting on a handwritten letter sealed with red wax" loading="lazy"></div>
   <div class="com-form">
-    <h2 class="split">Commission a pen.</h2>
+    <h2 class="ink-h">Commission a pen.</h2>
     <p class="rv">Tell us whose name it is for. A craftsman will write back to you by hand.</p>
     <form id="cForm" novalidate>
       <label>Name to engrave<input name="n" required maxlength="24" placeholder="Your name"></label>
@@ -258,14 +270,41 @@
       <p class="err" id="cErr" role="alert"></p>
       <button class="btn" type="submit">Request a commission</button>
     </form>
-    <div id="cDone" class="done" hidden>
-      <p class="done-sig" id="cSig"></p>
-      <p>Commission requested. Expect a handwritten reply within a week.</p>
+    <div id="post" class="post" hidden>
+      <div class="env">
+        <div class="env-back"></div>
+        <div class="letter" id="letter">
+          <div class="lp lp1"><p class="lw" id="lw1"></p></div>
+          <div class="lp lp2"><p class="lw" id="lw2"></p></div>
+          <div class="lp lp3"><p class="lw" id="lw3"></p></div>
+        </div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+        <div class="env-seal"><svg viewBox="0 0 200 200"><use href="#sealArt"/></svg></div>
+      </div>
+      <p class="post-msg" id="postMsg">Sealed and sent. Expect a handwritten reply within a week.</p>
     </div>
   </div>
 </section>
 
 </main>
+
+<div id="pd" class="pd" role="dialog" aria-modal="true" aria-labelledby="pdN" hidden>
+  <div class="pd-bg" data-close></div>
+  <div class="pd-card">
+    <figure class="pd-img"><img id="pdI" alt=""></figure>
+    <div class="pd-txt">
+      <p class="pd-no" id="pdNo"></p>
+      <h3 id="pdN"></h3>
+      <p class="pd-o" id="pdO"></p>
+      <p class="pd-d" id="pdD"></p>
+      <dl class="pd-spec" id="pdS"></dl>
+      <p class="pd-pr" id="pdP"></p>
+      <div class="pd-act"><button class="btn" id="pdWrite">Write with this pen</button><button class="btn ghost-b" id="pdCom">Commission it</button></div>
+    </div>
+    <button class="pd-x" data-close aria-label="Close">×</button>
+  </div>
+</div>
 
 <footer class="ft">
   <svg class="ft-guil guil" data-n="13" data-k="110" aria-hidden="true"></svg>
