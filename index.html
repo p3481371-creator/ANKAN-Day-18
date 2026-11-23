@@ -44,6 +44,7 @@
     <a href="#nib">The nib</a>
     <a href="#write">Write</a>
     <a href="#collection">Collection</a>
+    <a href="#make">Make yours</a>
     <button class="snd" id="snd" aria-pressed="false" aria-label="Sound of the nib"><i></i><i></i><i></i><i></i><span>Sound</span></button>
     <a href="#commission" class="nav-cta">Commission a pen</a>
   </nav>
@@ -205,6 +206,7 @@
       <defs><radialGradient id="dropG" cx="35%" cy="30%"><stop offset="0" stop-color="#fff8e6"/><stop offset=".5" stop-color="#e7cf9c"/><stop offset="1" stop-color="#9a7638"/></radialGradient></defs>
     </svg>
     <p class="bleed-l" id="bleedL">A single drop, and the page begins.</p>
+    <p class="bleed-l2" id="bleedL2"><span>Six families.</span> <span>Six towns.</span> <em>Open the case.</em></p>
   </div>
 </div>
 
@@ -227,6 +229,144 @@
   </div>
 </section>
 
+
+<!-- ───── make it yours ───── -->
+<section id="make" class="mk light">
+  <div class="mk-head">
+    <p class="kick rv">Make it yours</p>
+    <h2 class="ink-h">Five choices. One pen, made once.</h2>
+    <p class="rv">Pick a craft, a nib, a grind and an ink. Type the name for the barrel. The price changes as you go, and everything carries into your commission.</p>
+  </div>
+  <div class="mk-grid">
+    <div class="mk-stage">
+      <figure class="mk-fig" id="mkFig">
+        <img src="img/bidri.webp" alt="The Bidri pen you are configuring" class="mk-img on">
+        <svg class="mk-guil guil" data-n="10" data-k="80" aria-hidden="true"></svg>
+        <figcaption class="mk-cap"><span class="mk-capw"><span id="mkCraftN">Bidri</span></span><span class="mk-capw"><i id="mkTown">Bidar, Karnataka</i></span></figcaption>
+        <div class="loupe" id="loupe" aria-hidden="true">
+          <svg viewBox="-60 -70 120 140"><defs>
+            <linearGradient id="lpG" x1="0" x2="1"><stop offset="0" id="lp0" stop-color="#8a6420"/><stop offset=".45" id="lp1" stop-color="#f3d998"/><stop offset=".55" id="lp2" stop-color="#c79a45"/><stop offset="1" id="lp3" stop-color="#9c7330"/></linearGradient>
+            <linearGradient id="lpS" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+            <clipPath id="lpC"><path d="M0 62 L-30 -10 Q-36 -44 -22 -66 L22 -66 Q36 -44 30 -10 Z"/></clipPath></defs>
+            <path d="M0 62 L-30 -10 Q-36 -44 -22 -66 L22 -66 Q36 -44 30 -10 Z" fill="url(#lpG)" stroke="rgba(0,0,0,.45)" stroke-width="1"/>
+            <path id="lpTone" d="M0 62 L-30 -10 Q-33 -28 -28 -40 L28 -40 Q33 -28 30 -10 Z" fill="#e9ebef" opacity="0"/>
+            <path d="M-20 -30 q8 10 0 20 q-8 10 0 20 M20 -30 q-8 10 0 20 q8 10 0 20" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="1.2"/>
+            <path d="M0 60 V-6" stroke="#1a1208" stroke-width="1.4"/><circle cx="0" cy="-10" r="5" fill="#1a1208"/>
+            <rect id="lpShine" x="-90" y="-70" width="40" height="140" fill="url(#lpS)" clip-path="url(#lpC)" transform="skewX(-18)"/>
+          </svg>
+          <span id="lpL">18k gold</span>
+        </div>
+      </figure>
+      <div class="mk-band" aria-label="Engraving preview">
+        <svg id="band" viewBox="0 0 600 120" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="bandM" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2d33"/><stop offset=".18" stop-color="#8b8f98"/><stop offset=".32" stop-color="#3b3f47"/><stop offset=".7" stop-color="#15171b"/><stop offset=".86" stop-color="#4c5058"/><stop offset="1" stop-color="#1a1c20"/></linearGradient>
+            <linearGradient id="bandG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6420"/><stop offset=".35" stop-color="#f3d998"/><stop offset=".55" stop-color="#c79a45"/><stop offset=".8" stop-color="#fff1c7"/><stop offset="1" stop-color="#9c7330"/></linearGradient>
+            <pattern id="bandP" width="14" height="120" patternUnits="userSpaceOnUse"><path d="M0 0 Q7 30 0 60 T0 120 M7 0 Q14 30 7 60 T7 120" fill="none" stroke="rgba(255,255,255,.07)" stroke-width=".7"/></pattern>
+            <clipPath id="bandClip"><rect id="bandReveal" x="0" y="0" width="600" height="120"/></clipPath>
+          </defs>
+          <rect x="0" y="6" width="600" height="108" rx="10" fill="url(#bandM)"/>
+          <rect x="0" y="6" width="600" height="108" rx="10" fill="url(#bandP)"/>
+          <line x1="16" y1="22" x2="584" y2="22" stroke="#c2a26a" stroke-opacity=".5"/><line x1="16" y1="98" x2="584" y2="98" stroke="#c2a26a" stroke-opacity=".5"/>
+          <g clip-path="url(#bandClip)"><path id="bandName" fill="url(#bandG)"/></g>
+          <text x="584" y="92" text-anchor="end" class="band-no" id="bandNo">No. 07 / 31</text>
+        </svg>
+        <p class="mk-band-k">Engraved under the clip, by hand</p>
+      </div>
+      <div class="mk-line">
+        <svg viewBox="0 0 600 90" aria-hidden="true"><path id="mkStroke" d="M14 58 C60 10 92 12 104 44 S140 86 170 52 S214 8 240 40 S286 84 316 50 S360 14 388 44 S436 80 470 50 S530 22 586 40" fill="none" stroke-linecap="round"/></svg>
+        <p><span id="mkLineL">Fine, 0.5 mm</span> · <span id="mkInkL">Gold ink</span></p>
+      </div>
+    </div>
+    <form class="mk-opts" id="mkForm" onsubmit="return false">
+      <fieldset class="mk-step"><legend><b>01</b>Craft</legend>
+        <div class="mk-crafts" role="radiogroup" aria-label="Craft">
+          <button type="button" role="radio" aria-checked="true" class="on" data-i="0"><img src="img/bidri.webp" alt=""><span>Bidri</span></button>
+          <button type="button" role="radio" aria-checked="false" data-i="1"><img src="img/meena.webp" alt=""><span>Meenakari</span></button>
+          <button type="button" role="radio" aria-checked="false" data-i="2"><img src="img/filigree.webp" alt=""><span>Tarakasi</span></button>
+          <button type="button" role="radio" aria-checked="false" data-i="3"><img src="img/sandal.webp" alt=""><span>Sandalwood</span></button>
+          <button type="button" role="radio" aria-checked="false" data-i="4"><img src="img/lac.webp" alt=""><span>Channapatna</span></button>
+          <button type="button" role="radio" aria-checked="false" data-i="5"><img src="img/ebony.webp" alt=""><span>Ebony &amp; gold</span></button>
+        </div>
+      </fieldset>
+      <fieldset class="mk-step"><legend><b>02</b>Nib metal</legend>
+        <div class="mk-row" role="radiogroup" aria-label="Nib metal" data-g="fin">
+          <button type="button" role="radio" aria-checked="true" class="on" data-v="0" style="--a:#8a6420;--b:#f3d998;--c2:#c79a45">18k gold<small>Included</small></button>
+          <button type="button" role="radio" aria-checked="false" data-v="1" style="--a:#8d9098;--b:#f4f5f7;--c2:#c9ccd2;--t:#c79a45">Two-tone rhodium<small>+ ₹4,500</small></button>
+          <button type="button" role="radio" aria-checked="false" data-v="2" style="--a:#121316;--b:#5b5e66;--c2:#2a2c31">Black ruthenium<small>+ ₹6,000</small></button>
+        </div>
+      </fieldset>
+      <fieldset class="mk-step"><legend><b>03</b>Grind</legend>
+        <div class="mk-pills" role="radiogroup" aria-label="Grind" data-g="grind">
+          <button type="button" role="radio" aria-checked="false" data-v="0">Extra fine</button>
+          <button type="button" role="radio" aria-checked="true" class="on" data-v="1">Fine</button>
+          <button type="button" role="radio" aria-checked="false" data-v="2">Medium</button>
+          <button type="button" role="radio" aria-checked="false" data-v="3">Broad</button>
+          <button type="button" role="radio" aria-checked="false" data-v="4">Stub</button>
+          <button type="button" role="radio" aria-checked="false" data-v="5">Italic</button>
+        </div>
+      </fieldset>
+      <fieldset class="mk-step"><legend><b>04</b>Ink</legend>
+        <div class="mk-pills mk-inks" role="radiogroup" aria-label="Ink" data-g="ink">
+          <button type="button" role="radio" aria-checked="true" class="on" data-v="gold" style="--c:#d9bd84">Gold</button>
+          <button type="button" role="radio" aria-checked="false" data-v="neel" style="--c:#4f6bd0">Indigo</button>
+          <button type="button" role="radio" aria-checked="false" data-v="sindoor" style="--c:#c9443a">Vermilion</button>
+          <button type="button" role="radio" aria-checked="false" data-v="kesar" style="--c:#e09a3a">Saffron</button>
+        </div>
+      </fieldset>
+      <fieldset class="mk-step"><legend><b>05</b>Engraving</legend>
+        <label class="sr" for="mkName">Name to engrave</label>
+        <input id="mkName" maxlength="24" aria-describedby="mkCount" placeholder="Name for the barrel" spellcheck="false" autocomplete="off">
+        <p class="mk-count" id="mkCount">0 / 24</p>
+      </fieldset>
+      <div class="mk-total" aria-live="polite">
+        <div><p class="mk-total-k">Your Ankan</p><p class="mk-sum" id="mkSum">Bidri · 18k gold · Fine · Gold ink</p></div>
+        <p class="mk-price"><i class="mk-delta" id="mkDelta"></i>₹<span id="mkPrice">48,000</span></p>
+      </div>
+      <button type="button" class="btn" id="mkGo">Carry this to my commission</button>
+    </form>
+  </div>
+</section>
+
+<!-- ───── in the hand ───── -->
+<section id="hand" class="hand">
+  <div class="hand-head">
+    <p class="kick rv">In the hand</p>
+    <h2 class="ink-h">Measured by hand, for the hand.</h2>
+    <div class="hand-tabs" role="tablist" aria-label="View">
+      <button role="tab" id="tabWhole" aria-controls="handFig" aria-selected="true" class="on" data-v="whole">Whole</button>
+      <button role="tab" id="tabApart" aria-controls="handFig" aria-selected="false" tabindex="-1" data-v="apart">Apart</button>
+    </div>
+  </div>
+  <figure class="hand-fig" id="handFig" role="tabpanel" aria-labelledby="tabWhole">
+    <img src="img/assembled.webp" alt="The Bidri pen, capped, lying flat" class="hf-img on" data-v="whole" loading="lazy">
+    <img src="img/parts.webp" alt="The Bidri pen laid out in its five parts" class="hf-img" data-v="apart" loading="lazy">
+    <svg class="hand-svg" id="handSvg" viewBox="0 0 1376 768" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g class="dim" data-v="whole">
+        <path d="M62 262 V300 M1318 262 V300 M62 280 H1318"/><text x="690" y="262">142 mm capped</text>
+        <path d="M1336 325 H1366 M1336 445 H1366 M1351 325 V445"/><text x="1330" y="484" style="text-anchor:end">⌀ 14 mm</text>
+        <path d="M62 496 V530 M1210 496 V530 M62 512 H1210" class="dl"/><text x="636" y="552">168 mm posted</text>
+      </g>
+      <g class="dim" data-v="apart">
+        <path d="M49 300 V330 M394 300 V330 M49 315 H394"/><text x="221" y="296">Cap · 39</text>
+        <path d="M408 458 V488 M615 458 V488 M408 473 H615"/><text x="511" y="512">Nib &amp; feed · 23</text>
+        <path d="M617 300 V330 M756 300 V330 M617 315 H756"/><text x="686" y="296">Section · 16</text>
+        <path d="M771 458 V488 M950 458 V488 M771 473 H950"/><text x="860" y="512">Converter · 20</text>
+        <path d="M965 300 V330 M1324 300 V330 M965 315 H1324"/><text x="1144" y="296">Barrel · 41</text>
+      </g>
+    </svg>
+  </figure>
+  <p class="hand-cap" id="handCap" aria-live="polite">142 mm capped · 168 mm posted · ⌀ 14 mm</p>
+  <dl class="specs">
+    <div><dt>Length, capped</dt><dd><b data-n="142">0</b> mm</dd></div>
+    <div><dt>Length, posted</dt><dd><b data-n="168">0</b> mm</dd></div>
+    <div><dt>Weight, filled</dt><dd><b data-n="38">0</b> g</dd></div>
+    <div><dt>Barrel</dt><dd>⌀ <b data-n="14">0</b> mm</dd></div>
+    <div><dt>Section</dt><dd>⌀ <b data-n="11">0</b> mm</dd></div>
+    <div><dt>Ink held</dt><dd><b data-n="1.1" data-d="1">0</b> ml</dd></div>
+  </dl>
+</section>
+
 <!-- ───── anatomy ───── -->
 <section id="anatomy" class="anat light">
   <svg id="anatLine" class="anat-line" aria-hidden="true"><path id="anatP"/></svg>
@@ -245,6 +385,69 @@
       <li><h3>Breather hole</h3><p>Ours is a heart, pierced by hand. It lets air in as ink flows out, and stops the nib from cracking.</p></li>
       <li><h3>Engraving</h3><p>Scrollwork cut with a burin on the gold. No two Ankan nibs carry the same pattern.</p></li>
     </ol>
+  </div>
+</section>
+
+
+<!-- ───── filling ritual ───── -->
+<section id="fill" class="fill" aria-label="How to fill the pen">
+  <div class="fill-stick">
+    <div class="fill-txt">
+      <p class="kick">The ritual</p>
+      <h2>Filling a pen is the first thing you write.</h2>
+      <ol class="fill-steps" id="fillSteps">
+        <li class="on"><b>I</b><div><h3>Dip</h3><p>Lower the nib into the bottle, past the breather hole.</p></div></li>
+        <li><b>II</b><div><h3>Draw</h3><p>Turn the knob. The piston rises and the ink follows it up.</p></div></li>
+        <li><b>III</b><div><h3>Return a drop</h3><p>Lift, give one drop back to the bottle, wipe the nib, write.</p></div></li>
+      </ol>
+    </div>
+    <div class="fill-art">
+      <svg id="fillSvg" viewBox="0 0 420 820" aria-hidden="true">
+        <defs>
+          <linearGradient id="glass" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".18" stop-color="#fff" stop-opacity=".04"/><stop offset=".8" stop-color="#fff" stop-opacity=".02"/><stop offset="1" stop-color="#fff" stop-opacity=".16"/></linearGradient>
+          <linearGradient id="silv" x1="0" x2="1"><stop offset="0" stop-color="#5d6068"/><stop offset=".3" stop-color="#e9ebef"/><stop offset=".55" stop-color="#8d9098"/><stop offset=".85" stop-color="#cfd2d8"/><stop offset="1" stop-color="#55585f"/></linearGradient>
+          <linearGradient id="gnib" x1="0" x2="1"><stop offset="0" stop-color="#8a6420"/><stop offset=".45" stop-color="#f3d998"/><stop offset="1" stop-color="#a47b35"/></linearGradient>
+          <linearGradient id="inkG" x1="0" x2="1"><stop offset="0" style="stop-color:var(--fi2)"/><stop offset=".45" style="stop-color:var(--fi)"/><stop offset="1" style="stop-color:var(--fi2)"/></linearGradient>
+          <linearGradient id="depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset=".35" stop-color="#000" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".62"/></linearGradient>
+          <clipPath id="tubeC"><rect x="186" y="92" width="48" height="236" rx="6"/></clipPath>
+          <clipPath id="bottleC"><path d="M96 600 Q96 560 140 548 L160 540 V506 H260 V540 L280 548 Q324 560 324 600 V770 Q324 800 294 800 H126 Q96 800 96 770 Z"/></clipPath>
+        </defs>
+        <!-- pen -->
+        <g id="penG">
+          <rect x="196" y="20" width="28" height="42" rx="5" fill="url(#silv)"/>
+          <g id="knurl"><path d="M198 26 H222 M198 32 H222 M198 38 H222 M198 44 H222 M198 50 H222 M198 56 H222" stroke="#2a2c31" stroke-width="1.4"/></g>
+          <rect x="184" y="62" width="52" height="30" rx="3" fill="url(#silv)"/>
+          <rect x="186" y="92" width="48" height="236" rx="6" fill="rgba(255,255,255,.04)" stroke="rgba(233,215,174,.5)" stroke-width="1.2"/>
+          <g clip-path="url(#tubeC)"><rect id="tInk" x="186" y="328" width="48" height="0" fill="url(#inkG)"/></g>
+          <rect id="piston" x="188" y="300" width="44" height="14" rx="3" fill="url(#silv)"/>
+          <rect id="rod" x="206" y="92" width="8" height="208" fill="url(#silv)" opacity=".9"/>
+          <rect x="186" y="92" width="48" height="236" rx="6" fill="url(#glass)"/>
+          <rect x="178" y="328" width="64" height="70" rx="6" fill="url(#silv)"/>
+          <path d="M184 398 H236 L232 420 H188 Z" fill="#14161a"/>
+          <path d="M210 520 L188 428 Q186 408 194 398 H226 Q234 408 232 428 Z" fill="url(#gnib)" stroke="#5b4219" stroke-width=".8"/>
+          <path d="M210 518 V452" stroke="#3a2a0c" stroke-width="1.1"/><circle cx="210" cy="450" r="4" fill="#1a1208"/>
+          <path d="M197 418 Q210 432 223 418" fill="none" stroke="#6d5221" stroke-width=".8"/>
+        </g>
+        <!-- ink, in front of the dipped nib -->
+        <g id="inkFront" opacity=".93"><rect id="bInk" x="90" y="640" width="240" height="170" fill="url(#inkG)" clip-path="url(#bottleC)"/>
+          <path id="bSurf" d="" style="fill:var(--fi)" opacity=".85" clip-path="url(#bottleC)"/>
+          <rect x="90" y="560" width="240" height="250" fill="url(#depth)" clip-path="url(#bottleC)"/>
+          <path id="meniscus" d="" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2" clip-path="url(#bottleC)"/>
+          <ellipse id="fRing1" cx="210" cy="640" rx="0" ry="0" fill="none" stroke="#fff4d6" stroke-width="1.2" opacity="0"/><ellipse id="fRing2" cx="210" cy="640" rx="0" ry="0" fill="none" stroke="#fff4d6" stroke-width="1" opacity="0"/></g>
+        <!-- bottle -->
+        <g id="bottle">
+          <path d="M96 600 Q96 560 140 548 L160 540 V506 H260 V540 L280 548 Q324 560 324 600 V770 Q324 800 294 800 H126 Q96 800 96 770 Z" fill="url(#glass)" stroke="rgba(233,215,174,.45)" stroke-width="1.4"/>
+          <rect x="152" y="490" width="116" height="18" rx="4" fill="none" stroke="rgba(233,215,174,.35)"/>
+          <path d="M112 610 Q114 580 140 566" stroke="#fff" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M112 640 V760" stroke="#fff" stroke-opacity=".18" stroke-width="7" stroke-linecap="round"/><path d="M308 620 V770" stroke="#fff" stroke-opacity=".1" stroke-width="2" stroke-linecap="round"/>
+          <rect x="136" y="690" width="148" height="78" rx="2" fill="#efe6d3"/><rect x="142" y="696" width="136" height="66" fill="none" stroke="#b8955a" stroke-width=".8"/>
+          <text x="210" y="724" text-anchor="middle" class="b-lab">ANKAN</text><text x="210" y="748" text-anchor="middle" class="b-lab2" id="bLab">Gold</text>
+        </g>
+        <circle id="fDrop" cx="210" cy="530" r="0" style="fill:var(--fi)"/>
+        <g id="bubbles"></g>
+      </svg>
+      <div class="fill-ml"><span id="fillMl">0.0</span><small>ml</small></div>
+    </div>
   </div>
 </section>
 
@@ -277,6 +480,29 @@
   </div>
 </section>
 
+
+<!-- ───── care ───── -->
+<section id="care" class="care light">
+  <div class="care-head">
+    <p class="kick rv">After it leaves the bench</p>
+    <h2 class="ink-h">Kept for a lifetime.</h2>
+  </div>
+  <ol class="vows">
+    <li class="rv"><b>i</b><h3>Made in six to ten weeks</h3><p>We write to you at each stage: the barrel, the nib, the first line it lays down.</p></li>
+    <li class="rv"><b>ii</b><h3>A regrind within sixty days</h3><p>If the line is not yet yours, send it back. The nib master grinds it again, free.</p></li>
+    <li class="rv"><b>iii</b><h3>Nib service for life</h3><p>Cleaning, tuning, a new feed if it ever needs one. Always free, for as long as you write.</p></li>
+    <li class="rv"><b>iv</b><h3>Insured, in rosewood</h3><p>Every pen travels in its hand-polished case with a bottle of the ink you chose.</p></li>
+  </ol>
+  <div class="faq">
+    <h3 class="faq-t rv">Questions people ask us</h3>
+    <details class="rv"><summary>Can I change the nib after the pen is made?</summary><div><p>Yes. Nib units screw out of the section, so we can fit a different grind or metal later. Grind changes are free in the first sixty days.</p></div></details>
+    <details class="rv"><summary>Which ink should I use?</summary><div><p>Any bottled ink made for fountain pens. Avoid India ink, calligraphy ink and anything with shellac; they dry inside the feed.</p></div></details>
+    <details class="rv"><summary>How do I clean it?</summary><div><p>Every few fills, draw up clean water and push it out a few times until it runs clear. Let the nib dry nib-down on a cloth. Never use alcohol on the barrel.</p></div></details>
+    <details class="rv"><summary>Will the Bidri or silver tarnish?</summary><div><p>Bidri does not; it is already darkened. Silver and filigree slowly warm to a soft patina. A dry polishing cloth comes in the case.</p></div></details>
+    <details class="rv"><summary>Do you ship outside India?</summary><div><p>In this concept, yes: insured delivery to most countries, with duties shown before you confirm.</p></div></details>
+  </div>
+</section>
+
 <!-- ───── commission ───── -->
 <section id="commission" class="com light">
   <div class="com-img soak"><img src="img/letter.webp" alt="A fountain pen resting on a handwritten letter sealed with red wax" loading="lazy"></div>
@@ -287,7 +513,10 @@
       <label>Name to engrave<input name="n" required maxlength="24" placeholder="Your name"></label>
       <label>Craft<select name="c"><option>Bidri</option><option>Meenakari</option><option>Tarakasi</option><option>Sandalwood</option><option>Channapatna lac</option><option>Ebony &amp; gold</option></select></label>
       <label>Nib<select name="b"><option>Extra fine</option><option selected>Fine</option><option>Medium</option><option>Broad</option><option>Stub</option><option>Italic</option></select></label>
+      <label>Nib metal<select name="m"><option>18k gold</option><option>Two-tone rhodium</option><option>Black ruthenium</option></select></label>
+      <label>Ink<select name="i"><option>Gold</option><option>Indigo</option><option>Vermilion</option><option>Saffron</option></select></label>
       <label>Email<input name="e" type="email" required placeholder="you@example.com"></label>
+      <p class="c-cfg" id="cCfg" hidden></p>
       <p class="err" id="cErr" role="alert"></p>
       <button class="btn" type="submit">Request a commission</button>
     </form>
@@ -329,8 +558,21 @@
 
 <footer class="ft">
   <svg class="ft-guil guil" data-n="13" data-k="110" aria-hidden="true"></svg>
+  <div class="ft-top">
+    <form class="ft-letter" id="ftForm" novalidate>
+      <p class="ft-k">Letters from the bench</p>
+      <p class="ft-lead">Four times a year, a craftsman writes to you by hand about what is on the bench.</p>
+      <div class="ft-in"><label class="sr" for="ftE">Email</label><input id="ftE" type="email" placeholder="you@example.com"><button class="btn" type="submit">Write to me</button></div>
+      <p class="ft-ok" id="ftOk" role="status"></p>
+    </form>
+    <nav class="ft-cols" aria-label="Footer">
+      <div><p class="ft-k">The house</p><a href="#film">The pen</a><a href="#nib">The nib</a><a href="#collection">The case</a><a href="#make">Make yours</a></div>
+      <div><p class="ft-k">Service</p><a href="#fill">Filling</a><a href="#care">Care &amp; service</a><a href="#commission">Commission</a></div>
+      <div><p class="ft-k">Ateliers</p><span>Bidar · Jaipur</span><span>Cuttack · Mysuru</span><span>Channapatna</span><span>Hoshiarpur</span></div>
+    </nav>
+  </div>
   <p class="ft-mark">Ankan</p>
-  <p class="ft-l">Ankan writing instruments · Bidar · Jaipur · Cuttack · Mysuru · Channapatna · Hoshiarpur</p>
+  <p class="ft-l">Writing instruments, made by hand in six craft towns of India</p>
   <p class="ft-c">Concept website · sample products and prices · not a real store</p>
 </footer>
 
