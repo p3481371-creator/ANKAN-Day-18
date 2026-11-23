@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ANKAN · अंकन · Writing instruments made by hand in India</title>
+<title>ANKAN · Writing instruments made by hand in India</title>
 <meta name="description" content="Ankan is a concept house of fountain pens inlaid, enamelled and carved by hand across India. Watch the pen come apart, see the nib ground, and write your name in gold ink.">
-<link rel="preload" href="fonts/caslon.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bodoni.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="img/film-first.webp" as="image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 30 L8 8 Q8 2 16 2 Q24 2 24 8 Z%22 fill=%22%23c9a45c%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
@@ -15,7 +15,8 @@
 <!-- loader: a nib draws one gold line while the film arrives -->
 <div id="ld" aria-hidden="true">
   <div class="ld-in">
-    <p class="ld-dev">अंकन</p>
+    <p class="ld-mark" aria-hidden="true"><span>A</span><span>N</span><span>K</span><span>A</span><span>N</span></p>
+    <p class="ld-sub">Writing instruments, made by hand</p>
     <svg class="ld-line" viewBox="0 0 600 80" preserveAspectRatio="none">
       <path id="ldTrack" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
       <path id="ldP" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
@@ -27,7 +28,7 @@
 <canvas id="trail" aria-hidden="true"></canvas>
 
 <header id="hd">
-  <a class="logo" href="#top" aria-label="Ankan home"><span>Ankan</span><i>अंकन</i></a>
+  <a class="logo" href="#top" aria-label="Ankan home">ANKAN</a>
   <nav class="nav" aria-label="Main">
     <a href="#nib">The nib</a>
     <a href="#write">Write</a>
@@ -45,7 +46,7 @@
     <div class="film-shade"></div>
 
     <div id="hero" class="hero">
-      <p class="hero-dev">अंकन</p>
+      <p class="hero-ed">The Bidri Edition · No. 01 of 31</p>
       <h1>A pen that took<br>a year to make.</h1>
       <p class="hero-sub">Fountain pens inlaid, enamelled and carved by hand in six craft towns of India. Scroll, and watch one come apart.</p>
     </div>
@@ -57,7 +58,7 @@
     </div>
 
     <div id="parts" aria-hidden="true">
-      <div class="pt up" data-x="205"><b>Cap</b><span>Bidri jaal, silver clip</span></div>
+      <div class="pt up" data-x="205"><b>Cap</b><span>Silver inlay, sprung clip</span></div>
       <div class="pt dn" data-x="430"><b>Nib</b><span>18k gold, ground by hand</span></div>
       <div class="pt up" data-x="530"><b>Feed</b><span>Ebonite, fins cut by hand</span></div>
       <div class="pt dn" data-x="640"><b>Section</b><span>Sterling silver</span></div>
@@ -67,7 +68,7 @@
 
     <div class="ch ch-r" id="ch2">
       <h2>Thirty-one parts. One pair of hands.</h2>
-      <p>Every Ankan is fitted, inked and written with by the karigar who made it, before it leaves the bench.</p>
+      <p>Every Ankan is fitted, inked and written with by the craftsman who made it, before it leaves the bench.</p>
     </div>
 
     <ol id="hud" aria-hidden="true">
@@ -112,16 +113,16 @@
 <section id="write" class="write">
   <div class="write-head">
     <h2 class="split">Every Ankan is signed. Let us sign yours.</h2>
-    <p class="rv">Type a name. Our nib will write it in ink.</p>
+    <p class="rv">Type a name, choose an ink, and our nib will write it for you.</p>
   </div>
   <form id="wForm" class="wform" autocomplete="off">
     <label class="sr" for="wName">Your name</label>
-    <input id="wName" maxlength="18" value="Anshika" spellcheck="false">
+    <input id="wName" maxlength="18" value="" placeholder="Your name" spellcheck="false">
     <div class="inks" role="radiogroup" aria-label="Ink">
-      <button type="button" role="radio" aria-checked="true" class="on" data-ink="gold" style="--c:#d8b46a">Sona<small>gold</small></button>
-      <button type="button" role="radio" aria-checked="false" data-ink="neel" style="--c:#6f8be0">Neel<small>indigo</small></button>
-      <button type="button" role="radio" aria-checked="false" data-ink="sindoor" style="--c:#d9503f">Sindoor<small>vermilion</small></button>
-      <button type="button" role="radio" aria-checked="false" data-ink="kesar" style="--c:#efa13a">Kesar<small>saffron</small></button>
+      <button type="button" role="radio" aria-checked="true" class="on" data-ink="gold" style="--c:#d9bd84">Gold</button>
+      <button type="button" role="radio" aria-checked="false" data-ink="neel" style="--c:#7d96e8">Indigo</button>
+      <button type="button" role="radio" aria-checked="false" data-ink="sindoor" style="--c:#d8584a">Vermilion</button>
+      <button type="button" role="radio" aria-checked="false" data-ink="kesar" style="--c:#eaa448">Saffron</button>
     </div>
     <button class="btn" type="submit">Write it</button>
   </form>
@@ -149,14 +150,14 @@
 </section>
 
 <!-- ───── collection ───── -->
-<section id="collection" class="coll">
+<section id="collection" class="coll light">
   <div class="coll-stick">
     <div class="coll-head">
       <h2 class="split">Six crafts. Six towns. One pen each.</h2>
       <p class="rv">Every barrel is made by a family that has practised its craft for generations. We only design the nib, the fit and the balance.</p>
     </div>
     <div class="rail" id="rail">
-      <article class="pen"><figure><img src="img/bidri.webp" alt="Bidri fountain pen with silver inlay standing beside its cap" loading="lazy"></figure><h3>Bidri</h3><p class="o">Bidar, Karnataka</p><p>Blackened zinc, inlaid with pure silver wire in a floral jaal.</p><p class="pr">₹48,000</p></article>
+      <article class="pen"><figure><img src="img/bidri.webp" alt="Bidri fountain pen with silver inlay standing beside its cap" loading="lazy"></figure><h3>Bidri</h3><p class="o">Bidar, Karnataka</p><p>Blackened zinc, inlaid with pure silver wire in a floral pattern.</p><p class="pr">₹48,000</p></article>
       <article class="pen"><figure><img src="img/meena.webp" alt="Meenakari enamel fountain pen in red, green and gold" loading="lazy"></figure><h3>Meenakari</h3><p class="o">Jaipur, Rajasthan</p><p>Kiln-fired enamel in jewel colours over engraved silver, fired seven times.</p><p class="pr">₹56,000</p></article>
       <article class="pen"><figure><img src="img/filigree.webp" alt="Silver filigree fountain pen with blue accents" loading="lazy"></figure><h3>Tarakasi</h3><p class="o">Cuttack, Odisha</p><p>Silver filigree drawn finer than hair, coiled and soldered by hand.</p><p class="pr">₹64,000</p></article>
       <article class="pen"><figure><img src="img/sandal.webp" alt="Carved sandalwood fountain pen with copper cap" loading="lazy"></figure><h3>Sandalwood</h3><p class="o">Mysuru, Karnataka</p><p>Carved from a single fragrant billet; it still smells of sandal years later.</p><p class="pr">₹32,000</p></article>
@@ -168,12 +169,12 @@
 </section>
 
 <!-- ───── anatomy ───── -->
-<section id="anatomy" class="anat">
+<section id="anatomy" class="anat light">
   <div class="anat-img">
     <img src="img/nib.webp" alt="Engraved 18 karat gold nib with a heart-shaped breather hole" loading="lazy">
     <button class="hs" style="--x:86%;--y:83%" data-i="0" aria-label="Tipping"></button>
-    <button class="hs" style="--x:71%;--y:66%" data-i="1" aria-label="Slit"></button>
-    <button class="hs" style="--x:53%;--y:47%" data-i="2" aria-label="Breather hole"></button>
+    <button class="hs" style="--x:70%;--y:58%" data-i="1" aria-label="Slit"></button>
+    <button class="hs" style="--x:53%;--y:32%" data-i="2" aria-label="Breather hole"></button>
     <button class="hs" style="--x:27%;--y:16%" data-i="3" aria-label="Engraving"></button>
   </div>
   <div class="anat-txt">
@@ -192,22 +193,22 @@
   <figure class="kar-img"><img src="img/craftsman.webp" alt="A craftsman's hands fitting a pen on a wooden bench" loading="lazy"></figure>
   <div class="kar-txt">
     <blockquote class="split">“A machine can make a pen that writes. Only a hand can make one that writes like you.”</blockquote>
-    <p class="who rv">Rafiq Ahmed, Bidri karigar, Bidar. Thirty-four years at the bench.</p>
+    <p class="who rv">Rafiq Ahmed, Bidri craftsman, Bidar. Thirty-four years at the bench.</p>
     <div class="kar-inks rv">
-      <img src="img/inks.webp" alt="Four glass bottles of ink: indigo, vermilion, grey and saffron" loading="lazy">
-      <p>Our four inks are mixed in small batches: Neel, Sindoor, Monsoon and Kesar. Each pen ships with the one you choose.</p>
+      <img src="img/inks.webp" alt="Four glass bottles of ink in indigo, vermilion, grey and saffron" loading="lazy">
+      <p>Our four inks are mixed in small batches: Gold, Indigo, Vermilion and Saffron. Each pen ships with the one you choose.</p>
     </div>
   </div>
 </section>
 
 <!-- ───── commission ───── -->
-<section id="commission" class="com">
+<section id="commission" class="com light">
   <div class="com-img"><img src="img/letter.webp" alt="A fountain pen resting on a handwritten letter sealed with red wax" loading="lazy"></div>
   <div class="com-form">
     <h2 class="split">Commission a pen.</h2>
-    <p class="rv">Tell us whose name it is for. A karigar will write back to you by hand.</p>
+    <p class="rv">Tell us whose name it is for. A craftsman will write back to you by hand.</p>
     <form id="cForm" novalidate>
-      <label>Name to engrave<input name="n" required maxlength="24" placeholder="Anshika"></label>
+      <label>Name to engrave<input name="n" required maxlength="24" placeholder="Your name"></label>
       <label>Craft<select name="c"><option>Bidri</option><option>Meenakari</option><option>Tarakasi</option><option>Sandalwood</option><option>Channapatna lac</option><option>Ebony &amp; gold</option></select></label>
       <label>Nib<select name="b"><option>Extra fine</option><option selected>Fine</option><option>Medium</option><option>Broad</option><option>Stub</option><option>Italic</option></select></label>
       <label>Email<input name="e" type="email" required placeholder="you@example.com"></label>
@@ -224,7 +225,7 @@
 </main>
 
 <footer class="ft">
-  <p class="ft-dev">अंकन</p>
+  <p class="ft-mark">Ankan</p>
   <p class="ft-l">Ankan writing instruments · Bidar · Jaipur · Cuttack · Mysuru · Channapatna · Hoshiarpur</p>
   <p class="ft-c">Concept website · sample products and prices · not a real store</p>
 </footer>
