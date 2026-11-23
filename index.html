@@ -14,16 +14,20 @@
 
 <!-- loader: a nib draws one gold line while the film arrives -->
 <div id="ld" aria-hidden="true">
+  <div class="ld-half ld-l"></div><div class="ld-half ld-r"></div>
+  <div class="ld-slit"></div>
   <svg class="ld-guil guil" data-n="7" data-k="64" aria-hidden="true"></svg>
   <div class="ld-in">
-    <p class="ld-mark" aria-hidden="true"><span>A</span><span>N</span><span>K</span><span>A</span><span>N</span></p>
-    <p class="ld-sub">Writing instruments, made by hand</p>
-    <svg class="ld-line" viewBox="0 0 600 80" preserveAspectRatio="none">
-      <path id="ldTrack" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
-      <path id="ldP" d="M10 52 C 110 52, 140 18, 210 30 S 330 70, 400 44 S 520 24, 590 40" pathLength="1"/>
+    <svg id="ldSig" class="ld-sig" viewBox="0 0 800 300">
+      <defs>
+        <linearGradient id="ldG" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stop-color="#8d6c35"/><stop offset=".4" stop-color="#f3dcaa"/><stop offset=".6" stop-color="#b8955a"/><stop offset=".85" stop-color="#fff3d2"/><stop offset="1" stop-color="#9a7638"/></linearGradient>
+      </defs>
+      <g id="ldTrack"></g><g id="ldInk"></g><path id="ldFill" fill="url(#ldG)" opacity="0"/>
+      <g id="ldNib" opacity="0"><path d="M0 0 L-8 -30 Q-10 -46 -7 -58 L7 -58 Q10 -46 8 -30 Z" fill="url(#ldG)" stroke="#5b4219" stroke-width=".7"/><path d="M0 -1 L0 -34" stroke="#3a2a0c" stroke-width=".9"/><circle cx="0" cy="-36" r="2.3" fill="#1a1208"/><rect x="-10" y="-92" width="20" height="36" rx="3.5" fill="#0d1526" stroke="#b8955a" stroke-width=".9"/></g>
     </svg>
-    <p class="ld-n"><span id="ldN">0</span><small>ink drawn</small></p>
+    <p class="ld-n"><i>Filling the pen</i><span id="ldN">0</span></p>
   </div>
+  <canvas id="ldDust"></canvas>
 </div>
 
 <canvas id="trail" aria-hidden="true"></canvas>
@@ -40,6 +44,7 @@
     <a href="#nib">The nib</a>
     <a href="#write">Write</a>
     <a href="#collection">Collection</a>
+    <button class="snd" id="snd" aria-pressed="false" aria-label="Sound of the nib"><i></i><i></i><i></i><i></i><span>Sound</span></button>
     <a href="#commission" class="nav-cta">Commission a pen</a>
   </nav>
 </header>
@@ -53,12 +58,28 @@
     <div class="film-shade"></div>
     <canvas id="dust" aria-hidden="true"></canvas>
 
+    <div class="glint" id="glint"></div>
     <div id="hero" class="hero">
-      <p class="hero-ed">The Bidri Edition · No. 01 of 31</p>
+      <p class="hero-ed">The Bidri Edition</p>
       <h1 class="ink-h">A pen that took<br>a year to make.</h1>
-      <p class="hero-sub">Fountain pens inlaid, enamelled and carved by hand in six craft towns of India. Scroll, and watch one come apart.</p>
     </div>
-    <p id="cue" class="cue"><span></span>Scroll</p>
+    <div class="hero-foot" id="heroFoot">
+      <p class="hero-sub">Fountain pens inlaid, enamelled and carved by hand in six craft towns of India. Scroll, and watch one come apart.</p>
+      <div class="hero-act"><a class="btn" href="#commission">Reserve No. 07</a><a class="hero-link" href="#write">Sign your name in gold</a></div>
+    </div>
+    <aside class="plate" id="plate" aria-label="Edition details">
+      <svg class="plate-guil guil" data-n="12" data-k="80" aria-hidden="true"></svg>
+      <p class="plate-k">Edition plate</p>
+      <p class="plate-no"><span id="plateN">01</span><small>/ 31</small></p>
+      <dl>
+        <div><dt>Barrel</dt><dd>Bidri, silver inlay</dd></div>
+        <div><dt>Nib</dt><dd>18k gold, hand ground</dd></div>
+        <div><dt>Maker</dt><dd>Rafiq Ahmed, Bidar</dd></div>
+      </dl>
+      <p class="plate-left"><b>6</b> of 31 still unclaimed this year</p>
+    </aside>
+    <p class="coords" aria-hidden="true">17°54′ N · 77°31′ E · Bidar</p>
+    <div id="cue" class="cue" aria-hidden="true"><span class="cue-line"><i class="cue-drop"></i></span><em>Scroll to take it apart</em></div>
 
     <div class="ch" id="ch1">
       <h2>Bidri, from the fort town of Bidar.</h2>
